@@ -64,7 +64,7 @@ For example, to run a linear regression model, edit the main script and:
 python main.py
 ```
 
-Each model is organized into a folder with its own script and Jupyter notebooks for exploration and visualization.
+Each model is organized into a folder with its own script.
 
 ## Directory Structure
 
