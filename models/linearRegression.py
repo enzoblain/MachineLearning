@@ -39,7 +39,7 @@ def adamUpdate(weight: float, bias: float, dW: float, dB: float, mW: float, vW: 
 def loss(data: pd.DataFrame) -> float:
     return ((data['predicted'] - data['y']) ** 2).mean()
 
-def adamLinearRegression(learning_rate: float = 0.01, max_iterations: int = 10000, convergence_threshold: float = 1e-6, file_path: str = 'datasets/LinearRegression1.csv') -> None:
+def linearRegression(learning_rate: float = 0.01, max_iterations: int = 10000, convergence_threshold: float = 1e-6, file_path: str = 'datasets/LinearRegression1.csv') -> None:
     data = pd.read_csv(file_path)
 
     weight, bias = 0.0, 0.0
@@ -87,8 +87,6 @@ def adamLinearRegression(learning_rate: float = 0.01, max_iterations: int = 1000
     plt.tight_layout()
     plt.show()
 
-    # Final results
     print("Final weights:", weight)
     print("Final bias:", bias)
     print("Final loss:", loss(data))
-
